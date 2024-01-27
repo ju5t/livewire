@@ -44,6 +44,6 @@ class BaseSession extends LivewireAttribute
 
     protected function key()
     {
-        return $this->key ?: (string) 'lw' . crc32($this->component->getName() . $this->getName());
+        return $this->key ?: (string) 'lw' . crc32($this->component->getId() . $this->getName());
     }
 }
